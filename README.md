@@ -1,7 +1,7 @@
 # C Networking system
 
 This networking system wasn't build nor meant for large scale use. It uses an int32_t pointer to store and send data and I would advise you to look at another system if your goal is a large operation like a forum or similar as configuring the values of the array might be annoying at that point. 
-Games might be challenging too, though I havn't used it.
+Games might be challenging too, though I havn't tried it.
 
 Alright if you are still here let's get started.
 
@@ -25,7 +25,7 @@ sampleServer.opt = True;
 sampleServer.message = "Welcome to the Server!\n";
 // Maximum number of clients
 sampleServer.max_clients = 100;
-// Buffer size of int32_t's possible to fill with data being send (actual number of bytes used are 4*N in this example 4096 or 4kb)
+// Number of int32_t's possible to fill with data (actual number of bytes used are 4*N in this example 4096 or 4kb)
 sampleServer.bufferSize = 1024;
 ```
 

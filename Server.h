@@ -144,7 +144,6 @@ int UpdateServer(struct Server* server)
 				close(server->sd);
 				server->client_socket[i] = 0;
 			}else{
-				write(server->sd, server->buffer, server->bufferSize);
 				result = 1;
 			}
 		}

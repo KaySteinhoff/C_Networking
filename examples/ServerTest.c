@@ -7,6 +7,7 @@ int main(int argc, char const* argv[])
 	myServer.message = "Welcome from Server\n";
 	myServer.max_clients = 100;
 	myServer.bufferSize = 1024;
+	myServer.port = 8000;
 	if(SetupServer(&myServer) != 0)
 		return -1;
 

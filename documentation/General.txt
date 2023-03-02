@@ -1,9 +1,0 @@
-This c code was not written to support a large scale operation but to practice and make setting up and use a server or client in c.
-If there are any problems please contact me via my E-Mail kay.steinhoff@outlook.com further more if there are contributions you'd like to make contact me as well.
-
-The Networking library is very simple and, hopefully because of this, easy to use. The Header files are build in a way that one can use whatever headers are needed to not compile unnecesary files.
-
-Networking
-  │
-  ├ Server.h
-  ├ Client.h

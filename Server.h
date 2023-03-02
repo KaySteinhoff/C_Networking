@@ -11,12 +11,11 @@
 
 #define TRUE 1
 #define FALSE 0
-#define PORT 8000
 
 struct Server
 {
 	int opt;
-	int master_socket, addrlen, new_socket, max_clients, activity, valread, sd;
+	int master_socket, addrlen, new_socket, max_clients, activity, valread, sd, port;
 	int* client_socket;
 	int max_sd;
 	struct sockaddr_in address;
@@ -51,7 +50,7 @@ int SetupServer(struct Server* server)
 
 	server->address.sin_family = AF_INET;
 	server->address.sin_addr.s_addr = INADDR_ANY;
-	server->address.sin_port = htons(PORT);
+	server->address.sin_port = htons(server->port);
 
 	if(bind(server->master_socket, (struct sockaddr*)&server->address, sizeof(server->address)) < 0)
 	{
@@ -59,7 +58,7 @@ int SetupServer(struct Server* server)
 		return EXIT_FAILURE;
 	}
 
-	printf("Master socket now listening on port %d.\n", PORT);
+	printf("Master socket now listening on port %d.\n", server->port);
 
 	if(listen(server->master_socket, 3) < 0)
 	{

@@ -6,7 +6,7 @@ int main(int argc, char const* argv[])
 	myClient.ip_address = "127.0.0.1";
 	myClient.port = 8000;
 	if(SetupClient(&myClient) != 0)
-		printf("Cloudn't connect!");
+		return -1;
 	printf("Created Server!\n");
 	
 	Receive(&myClient);
